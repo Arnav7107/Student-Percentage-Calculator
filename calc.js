@@ -11,13 +11,15 @@ document.getElementById("subject_enter").addEventListener('click',function()
             elem.appendChild(box);
         }
     }
+    const enterButton = document.getElementById("subject_enter");
+    // enterButton.addClass = "buttonPadding";
 });
 let sum=0;
 function func1()
     {
         const number = document.getElementById("subjects").value;
     console.log(number);
-    const elem = document.getElementById("boxes") //createElement("li");
+    const elem = document.getElementById("boxes"); //createElement("li");
         for(i=0 ; i<number ; i++){
             const label=document.createElement("p");
             label.innerHTML  = "Enter marks " + (i+1).toString();
@@ -33,23 +35,34 @@ function func1()
             elem.appendChild(label);
             elem.appendChild(box);
     }
-        const enter = document.createElement("button");
-        enter.setAttribute("id","calculate");
-        enter.setAttribute("name", "Enter");
-        elem.appendChild(enter);
+        // const enter = document.createElement("button");
+        // enter.setAttribute("id","calculate");
+        // enter.setAttribute("name", "Enter");
+        // elem.appendChild(enter);
     }
 
 document.getElementById("calculate").addEventListener('click',function()
 {
+    const elem = document.getElementById("boxes");
     const number = document.getElementById("subjects").value;
+    let percentage = 0;
     for(i=0 ; i<number ; i++)
     {
         const mark=parseInt(document.getElementById("mark"+(i+1).toString()).value);
              sum=sum+mark;
-             console.log(mark);
+             //console.log(mark);
     }  
-    console.log(sum/number);
+    percentage = (sum/number);
+    //console.log(percentage);
+    const outputLabel = document.getElementById("outputLabel");
+    outputLabel.innerHTML = "You percentage is:";
+    const output = document.getElementById("output");
+    output.innerHTML = percentage;
+    elem.appendChild(outputLabel);
+    elem.appendChild(output);
 })
+
+
 
 // document.getElementById("calculate").addEventListener('click',function()
 // {
