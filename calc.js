@@ -40,7 +40,6 @@ function func1()
         // enter.setAttribute("name", "Enter");
         // elem.appendChild(enter);
     }
-
 document.getElementById("calculate").addEventListener('click',function()
 {
     const elem = document.getElementById("boxes");
