@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 .container {
   padding: 0 2rem;
 }
@@ -129,7 +129,7 @@
   }
 }
 
-=======
+
 .container {
     padding: 0 2rem;
   }
@@ -257,6 +257,10 @@
     height: 1em;
     margin-left: 0.5rem;
   }
+
+  .title{
+    padding-top: 10px;
+  }
   
   @media (max-width: 600px) {
     .grid {
@@ -277,4 +281,3 @@
       filter: invert(1);
     }
   }
->>>>>>> Stashed changes
